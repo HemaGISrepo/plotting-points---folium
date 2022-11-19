@@ -1,0 +1,9 @@
+# Create a map
+m_2 = folium.Map(location=[42.32,-71.0589], tiles='cartodbpositron', zoom_start=13)
+
+# Add points to the map
+for idx, row in daytime_robberies.iterrows():
+    Marker([row['Lat'], row['Long']]).add_to(m_2)
+
+# Display the map
+m_2
